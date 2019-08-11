@@ -32,3 +32,19 @@ a {
   /* 부모로부터 색깔을 가져온다. 하이퍼링크는 클릭하면 보라색으로 변하기 때문에 검은색으로 계속 표현하기 위해서임 */
   text-decoration: none;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    /* 이거 -50으로 하면 위에서 밑으로 내려옴 */
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}

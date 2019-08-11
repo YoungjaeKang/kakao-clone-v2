@@ -34,3 +34,20 @@
   align-items: center;
   border-radius: 50%;
 }
+
+@keyframes showNavBar {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.nav {
+  transform: translateY(80px);
+  /* nav에도 transform이 없으면 nav bar가 한번 나타났다가 animation-delay초 뒤에 다시 또 나타나게 된다. */
+  /* 여기에 transform을 추가해 주면 기다렸따가 나타나게 되지 */
+  animation: showNavBar 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
