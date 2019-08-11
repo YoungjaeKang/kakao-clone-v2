@@ -1,0 +1,36 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 20px 50px;
+  bottom: 10px;
+  left: 0px;
+  bottom: 0px;
+  border-top: 1px solid #f7f7f7;
+  /* width: 100%에 padding을 주다 보니 box-sizing: border-box가 없으면 ellipsis 컨텐츠를 밀어내고 3개만 보이게 된다. */
+}
+
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20;
+}
+
+.nav .nav__list-link {
+  position: relative;
+}
+
+.nav .nav__badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  color: white;
+  background-color: #dc5d46;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}

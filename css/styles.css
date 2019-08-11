@@ -1,3 +1,30 @@
 /* reset.css를 쓰고 싶지 않다면, normalize.css를 쓸 수도 있따 */
 /* normalize.css는 h1를 더 크게 만들거나, 리스트를 리스트처럼 보이게 하거나 등등 할 수 있다. */
+@import url(<linkhref="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"rel="stylesheet">);
 @import "reset.css";
+@import "status-bar.css";
+@import "header.css";
+@import "nav-bar.css";
+@import "friend.css";
+@import "friends.css";
+
+* {
+  box-sizing: border-box;
+  /* 기본적으로 정해 놓은 box-size에서 padding을 추가하면 overcompensate된다. 예를 들어 width 300짜리 box에 padding 20을 추가하면,
+  컨텐츠가 280, 패딩이 20이 되는 게 아니라 300에 20이 되어 박스 전체의 크기가 320으로 커진다.
+  그걸 그냥 300으로 해주는 게 box-sizing: border-box다. */
+}
+
+body {
+  background-color: white;
+  padding: 10px 20px;
+  color: #020202;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: inherit;
+  /* 부모로부터 색깔을 가져온다. 하이퍼링크는 클릭하면 보라색으로 변하기 때문에 검은색으로 계속 표현하기 위해서임 */
+  text-decoration: none;
+}
